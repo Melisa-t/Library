@@ -60,6 +60,7 @@ body {
     width: 18%;
     border:2px solid blue;
     padding: 25px;
+    background-color: white;
 }
 
 .card {
@@ -67,6 +68,7 @@ body {
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+
 }
 
 

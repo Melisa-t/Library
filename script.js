@@ -3,16 +3,13 @@ const modal = document.getElementById("bookModal");
 const openModalBtn = document.querySelector(".openModalBtn");
 const closeModalBtn = document.getElementById("closeModalBtn");
 
-
 openModalBtn.addEventListener("click", function() {
   modal.style.display = "block";
 });
 
-
 closeModalBtn.addEventListener("click", function() {
   modal.style.display = "none";
 });
-
 
 window.addEventListener("click", function(event) {
   if (event.target === modal) {
