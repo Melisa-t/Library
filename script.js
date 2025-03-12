@@ -1,15 +1,25 @@
-function Book (title, author, pages, read) {
+function openForm() {
+    document.querySelector(".form").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.querySelector(".form").style.display = "none";
+  }
 
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
-
-    this.createBook  = function (){
-        return title + ` by ` + author + `, ` + pages + ' pages, ' + read
+class Book {
+    constructor(title, author, pages, read) {
+        this.id = crypto.randomUUID();
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
+function createNewBook() {
+    
 }
+
 
 function addBookToLibrary() {
 
@@ -25,3 +35,4 @@ const Book3 = new Book ("The Great Gatsby", `F. Scott Fitzgerald`, 180, `not rea
 const Book4 = new Book ("Pride and Prejudice", `Jane Austen`, 279, `read`)
 const Book5 = new Book ("The Hobbit", `J.R.R. Tolkien`, 310, `not read yet`)
 
+console.log(Book1)

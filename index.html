@@ -10,7 +10,18 @@
 <body>
     <div class="header">
         <h1>Mel's Library</h1>
-        <div class="add-btn">Add Books</div>
+        <div class="add-btn" onclick="openForm()">Add Books</div>
+        <div class="form">
+            <form class="book-submission">
+                <input type="text" id="title" placeholder="Title" required> 
+                <input type="text" id="authot" placeholder="Author" required> 
+                <input type="number" id="pages" placeholder="Pages" required> 
+                <label for="read">
+                    <input type="checkbox" id="read"> I have read this book
+                </label>
+                <div class="submit-btn" onclick="closeForm()">Add Book</div>
+            </form>
+        </div>
     </div>
     <div class="books">
         <div class="card">
