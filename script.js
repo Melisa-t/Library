@@ -1,10 +1,24 @@
-function openForm() {
-    document.querySelector(".form").style.display = "block";
+
+const modal = document.getElementById("bookModal");
+const openModalBtn = document.querySelector(".openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+
+
+openModalBtn.addEventListener("click", function() {
+  modal.style.display = "block";
+});
+
+
+closeModalBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+
+window.addEventListener("click", function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
   }
-  
-  function closeForm() {
-    document.querySelector(".form").style.display = "none";
-  }
+});
 
 class Book {
     constructor(title, author, pages, read) {
