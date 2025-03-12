@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.books{
+    width: 100%;
+    height: 85%;
+    background-color: purple;
+}
+
+.form{
+    display: none;
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer{
+    width: 100%;
+    height: 5%;
+}
