@@ -29,8 +29,39 @@ class Book {
 
 const books = document.querySelector(`.books`)
 
+ function addBookCard(){
+    const submitBtn = document.querySelector(`.submit-btn`)
+
+    submitBtn.addEventListener(`click`, () => { 
+        createWrap()
+    })
+} 
+
+addBookCard()
+
+function changeInput(title, author, pages, read) {
+
+    const inputAuthor = document.querySelector(`#author`)
+    author.textContent = `Author: ${inputAuthor.value}`;
+
+    const inputTitle = document.querySelector(`#title`)
+    title.textContent = `Title: ${inputTitle.value}`;
+
+    const inputPages = document.querySelector(`#pages`)
+    pages.textContent = `Pages: ${inputPages.value}`;
+
+    const inputRead = document.querySelector(`#read`)
+    
+        if(inputRead.checked) {
+            read.textContent = `Read: Yes`;
+        } else {
+            read.textContent = `Read: No`;
+        }
+;
+}
 
 function createWrap(){
+
       const books = document.querySelector(`.books`)
 
       const cardWrap = document.createElement("div")
@@ -45,9 +76,11 @@ function createWrap(){
       title.className = `title`
       card.appendChild(title)
 
+
       const author = document.createElement("div")
       author.className = `author`
       card.appendChild(author)
+
 
       const pages = document.createElement("div")
       pages.className = `pages`
@@ -73,10 +106,8 @@ function createWrap(){
       removeBtn.appendChild(removeBtnText)
       btns.appendChild(removeBtn)
 
-      console.log(removeBtn)
+      changeInput(title, author, pages, read)
 }
-
-createWrap()
 
 function addBookToLibrary() {
 
