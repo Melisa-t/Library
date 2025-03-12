@@ -27,10 +27,56 @@ class Book {
     }
 }
 
-function createNewBook() {
-    
+const books = document.querySelector(`.books`)
+
+
+function createWrap(){
+      const books = document.querySelector(`.books`)
+
+      const cardWrap = document.createElement("div")
+      cardWrap.className = `card-wrap`
+      books.appendChild(cardWrap)
+
+      const card = document.createElement("div")
+      card.className = `card`
+      cardWrap.appendChild(card)
+
+      const title = document.createElement("div")
+      title.className = `title`
+      card.appendChild(title)
+
+      const author = document.createElement("div")
+      author.className = `author`
+      card.appendChild(author)
+
+      const pages = document.createElement("div")
+      pages.className = `pages`
+      card.appendChild(pages)
+
+      const read = document.createElement("div")
+      read.className = `read`
+      card.appendChild(read)
+
+      const btns = document.createElement("div")
+      btns.className = `btns`
+      card.appendChild(btns)
+
+      const readBtn = document.createElement("div")
+      readBtn.className = `read-btn`
+      readBtnText = document.createTextNode("Read");
+      readBtn.appendChild(readBtnText)
+      btns.appendChild(readBtn)
+
+      const removeBtn = document.createElement("div")
+      removeBtn.className = `remove-btn`
+      removeBtnText = document.createTextNode("Remove");
+      removeBtn.appendChild(removeBtnText)
+      btns.appendChild(removeBtn)
+
+      console.log(removeBtn)
 }
 
+createWrap()
 
 function addBookToLibrary() {
 
