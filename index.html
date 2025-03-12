@@ -1,53 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mel's Library</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head> 
-<body>
+  </head>
+  <body>
     <div class="container">
+      <div class="header">
+        <h1>Mel's Library</h1>
+        <div class="add-btn openModalBtn btn">Add Books</div>
 
-        <div class="header">
-            <h1>Mel's Library</h1>
-            <div class="add-btn openModalBtn btn">Add Books</div>
-            
-            <div id="bookModal" class="modal">
-                <div class="modal-content">
-                  <span class="close-btn" id="closeModalBtn">&times;</span> 
-                  <h2 class="form-header">Add a Book</h2>
+        <div id="bookModal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h2 class="form-header">Add a Book</h2>
 
-                  <form id="book-form">
-                    <input type="text" id="title" placeholder="Book Title" required>
-                    <input type="text" id="author" placeholder="Author" required>
-                    <input type="number" id="pages" placeholder="Number of Pages" required>
-                    <label for="read">
-                      <input type="checkbox" id="read"> I have read this book
-                    </label>
-                    <div class="submit-btn btn">Add Book</div>
-                  </form>
-                </div>
+            <form id="book-form">
+              <input type="text" id="title" placeholder="Book Title" required />
+              <input type="text" id="author" placeholder="Author" required />
+              <input
+                type="number"
+                id="pages"
+                placeholder="Number of Pages"
+                required
+              />
+              <label for="read">
+                <input type="checkbox" id="read" /> I have read this book
+              </label>
+              <div class="submit-btn btn">Add Book</div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="books">
+        <div class="card-wrap">
+          <div class="card">
+            <div class="title">Title</div>
+            <div class="author">Author</div>
+            <div class="pages">Pages</div>
+            <div class="read">Read</div>
+            <div class="btns">
+              <div class="read-btn">ReadBtn</div>
+              <div class="remove-btn">RemoveBtn</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
               </div>
             </div>
-
-
-        <div class="books">
-
+          </div>
+          <div class="card-wrap">
             <div class="card">
-                <div class="title"></div>
-                <div class="author"></div>
-                <div class="pages"></div>
-                <div class="read"></div>
-                <div class="btns">
-                    <div class="read-btn"></div>
-                    <div class="remove-btn"></div>
-                </div>
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
             </div>
-        </div>
-        
-        <div class="footer"></div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="title">Title</div>
+              <div class="author">Author</div>
+              <div class="pages">Pages</div>
+              <div class="read">Read</div>
+              <div class="btns">
+                <div class="read-btn">ReadBtn</div>
+                <div class="remove-btn">RemoveBtn</div>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+      <div class="footer"></div>
     </div>
-</body>
+  </body>
 </html>
