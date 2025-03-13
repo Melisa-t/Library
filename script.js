@@ -170,3 +170,17 @@ const Book3 = new Book ("The Great Gatsby", `F. Scott Fitzgerald`, 180, `not rea
 const Book4 = new Book ("Pride and Prejudice", `Jane Austen`, 279, `read`)
 const Book5 = new Book ("The Hobbit", `J.R.R. Tolkien`, 310, `not read yet`)
 
+const textInputs = document.querySelectorAll('input[type="text"]');
+
+// Loop through each input field and add an event listener
+textInputs.forEach(input => {
+  input.addEventListener('input', function(event) {
+    // Use regex to allow only letters (A-Z, a-z)
+    const pattern = /^[A-Za-z]*$/;
+
+    // If the value doesn't match the pattern, remove non-letter characters
+    if (!pattern.test(event.target.value)) {
+      event.target.value = event.target.value.replace(/[^A-Za-z]/g, ''); // Replace non-letter characters
+    }
+  });
+});
