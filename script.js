@@ -34,7 +34,7 @@ const books = document.querySelector(`.books`)
 
     submitBtn.addEventListener(`click`, () => { 
       checkForm()
-      
+      modal.style.display = "none"; 
     })
 } 
 
@@ -71,7 +71,7 @@ function checkForm(){
   } else {
     createWrap()
   }
-  
+
   clearForm(formInput)
 }
 
