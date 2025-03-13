@@ -33,7 +33,8 @@ const books = document.querySelector(`.books`)
     const submitBtn = document.querySelector(`.submit-btn`)
 
     submitBtn.addEventListener(`click`, () => { 
-        createWrap()
+      
+      checkForm()
     })
 } 
 
@@ -56,8 +57,18 @@ function changeInput(title, author, pages, read) {
             read.textContent = `Read: Yes`;
         } else {
             read.textContent = `Read: No`;
-        }
+        }   
 ;
+}
+
+// it needs to check if input is entered and do not create wrap if it is not 
+function checkForm(){
+  const formInput = document.querySelectorAll("#title, #author, #pages")
+
+  if (!(formInput[0].value)  ||!(formInput[1].value) || !(formInput[2].value) ) {
+    alert('Please enter all the values before adding books!') 
+  } else 
+    createWrap()
 }
 
 function createWrap(){
@@ -105,6 +116,7 @@ function createWrap(){
       removeBtnText = document.createTextNode("Remove");
       removeBtn.appendChild(removeBtnText)
       btns.appendChild(removeBtn)
+
 
       changeInput(title, author, pages, read)
 }
