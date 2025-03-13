@@ -33,8 +33,8 @@ const books = document.querySelector(`.books`)
     const submitBtn = document.querySelector(`.submit-btn`)
 
     submitBtn.addEventListener(`click`, () => { 
-      
       checkForm()
+      
     })
 } 
 
@@ -63,12 +63,23 @@ function changeInput(title, author, pages, read) {
 
 // it needs to check if input is entered and do not create wrap if it is not 
 function checkForm(){
+
   const formInput = document.querySelectorAll("#title, #author, #pages")
 
   if (!(formInput[0].value)  ||!(formInput[1].value) || !(formInput[2].value) ) {
     alert('Please enter all the values before adding books!') 
-  } else 
+  } else {
     createWrap()
+  }
+  
+  clearForm(formInput)
+}
+
+//have to clear everything in the form after sending  
+function clearForm(formInput){
+  for( let i = 0; i < formInput.length; i++) {
+    formInput[i].value = ``;
+  }
 }
 
 function createWrap(){
