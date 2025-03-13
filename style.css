@@ -16,6 +16,7 @@
     --darker-color: #D5E5D5;
     --mid-color: #C7D9DD;
     --darkest-color: #ADB2D4;
+    --darkest-focus-color: #b8bbd2;
 }
 html{
         height: 100%;
@@ -47,7 +48,7 @@ body {
 }
 
 .books{
-    width: 70%;
+    width: 80%;
     height: 85%;
     display: flex;
     flex-wrap: wrap;
@@ -57,32 +58,40 @@ body {
 }
 
 .card-wrap {
-    width: 18%;
+    width: 15%;
     border:2px solid blue;
     padding: 25px;
     background-color: white;
 }
 
-.card {
+.book-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+}
 
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
 }
 
 
 .btns{
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+
 }
 
 .read-btn, .remove-btn {
     background-color: var(--darkest-color);
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: small;
 }
 
 .footer{
@@ -142,4 +151,13 @@ body {
     padding: 10px;
     border-radius: 15px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover, .btn:focus,.read-btn:hover, .read-btn:focus, .remove-btn:hover, .remove-btn:focus {
+    background-color: var(--darkest-focus-color);
+}
+
+.btn:hover, .read-btn:hover,.remove-btn:hover{
+    transform: scale(1.1)
 }

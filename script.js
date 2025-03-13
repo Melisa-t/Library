@@ -70,9 +70,10 @@ function checkForm(){
     alert('Please enter all the values before adding books!') 
   } else {
     createWrap()
+    clearForm(formInput)
   }
 
-  clearForm(formInput)
+
 }
 
 //have to clear everything in the form after sending  
