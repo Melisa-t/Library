@@ -1,4 +1,4 @@
-const myLibrary = []
+let myLibrary = []
 
 const modal = document.getElementById("bookModal");
 const openModalBtn = document.querySelector(".openModalBtn");
@@ -139,9 +139,16 @@ function createWrap(){
       btns.appendChild(removeBtn)
 
 
+
+
       changeInput(title, author, pages, read)
-      getLastBookId()
-      console.log(getLastBookId())
+      cardWrap.dataset.id = getLastBookId()
+      removeBtn.addEventListener("click", () => {
+        cardWrap.remove()
+        console.log(myLibrary)
+        myLibrary = myLibrary.filter((book) => book.id === getLastBookId())
+        console.log(myLibrary)
+      })
 }
 
 
