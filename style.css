@@ -161,3 +161,8 @@ body {
 .btn:hover, .read-btn:hover,.remove-btn:hover{
     transform: scale(1.1)
 }
+
+.btn:active, .read-btn:active,.remove-btn:active{
+    transform: translateY(4px);
+}
+

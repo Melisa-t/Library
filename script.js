@@ -30,17 +30,13 @@ class Book {
 function addBookToLibrary(title, author, pages, read){
   const bookObject = new Book(title, author, pages, read) 
   myLibrary.push(bookObject)
-  console.log(myLibrary)
 }
-
-const books = document.querySelector(`.books`)
 
  function addBookCard(){
     const submitBtn = document.querySelector(`.submit-btn`)
 
     submitBtn.addEventListener(`click`, () => { 
       checkForm()
-
     })
 } 
 
@@ -81,8 +77,6 @@ function checkForm(){
     clearForm(formInput)
     modal.style.display = "none"; 
   }
-
-
 }
 
 //have to clear everything in the form after sending  
