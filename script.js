@@ -27,20 +27,28 @@ class Book {
     }
 }
 
-function addBookToLibrary(title, author, pages, read){
+function addBookToLibrary(id, title, author, pages, read){
   const bookObject = new Book(title, author, pages, read) 
   myLibrary.push(bookObject)
+  removeBookFromLibrary(bookObject)
 }
 
- function addBookCard(){
-    const submitBtn = document.querySelector(`.submit-btn`)
+function removeBookFromLibrary(){
+  const removeButton = document.querySelector(".remove-btn")
+  
+  removeButton.addEventListener("click", () => {
 
-    submitBtn.addEventListener(`click`, () => { 
+  })
+}
+
+
+const submitBtn = document.querySelector(`.submit-btn`)
+
+submitBtn.addEventListener(`click`, () => { 
       checkForm()
     })
-} 
 
-addBookCard()
+
 
 function changeInput(title, author, pages, read) {
 
