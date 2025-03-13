@@ -30,6 +30,7 @@ class Book {
 function addBookToLibrary(title, author, pages, read){
   const bookObject = new Book(title, author, pages, read) 
   myLibrary.push(bookObject)
+  console.log(myLibrary)
 }
 
 const books = document.querySelector(`.books`)
@@ -39,7 +40,7 @@ const books = document.querySelector(`.books`)
 
     submitBtn.addEventListener(`click`, () => { 
       checkForm()
-      modal.style.display = "none"; 
+
     })
 } 
 
@@ -78,6 +79,7 @@ function checkForm(){
   } else {
     createWrap()
     clearForm(formInput)
+    modal.style.display = "none"; 
   }
 
 
