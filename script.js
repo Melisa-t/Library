@@ -27,6 +27,11 @@ class Book {
     }
 }
 
+function addBookToLibrary(title, author, pages, read){
+  const bookObject = new Book(title, author, pages, read) 
+  myLibrary.push(bookObject)
+}
+
 const books = document.querySelector(`.books`)
 
  function addBookCard(){
@@ -58,6 +63,8 @@ function changeInput(title, author, pages, read) {
         } else {
             read.textContent = `Read: No`;
         }   
+
+      addBookToLibrary(title, author, pages, read)
 ;
 }
 
@@ -133,13 +140,7 @@ function createWrap(){
       changeInput(title, author, pages, read)
 }
 
-function addBookToLibrary() {
-
-  }
-
-
 const myLibrary = []
-
 
 const Book1 = new Book ("To Kill a Mockingbird", `Harper Lee`, 281, `read`)
 const Book2 = new Book ("1984", `George Orwell`, 328, `read`)
@@ -147,4 +148,3 @@ const Book3 = new Book ("The Great Gatsby", `F. Scott Fitzgerald`, 180, `not rea
 const Book4 = new Book ("Pride and Prejudice", `Jane Austen`, 279, `read`)
 const Book5 = new Book ("The Hobbit", `J.R.R. Tolkien`, 310, `not read yet`)
 
-console.log(Book1)
