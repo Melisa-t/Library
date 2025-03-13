@@ -140,14 +140,25 @@ function createWrap(){
 
 
 
-
       changeInput(title, author, pages, read)
       cardWrap.dataset.id = getLastBookId()
+
       removeBtn.addEventListener("click", () => {
         cardWrap.remove()
-        console.log(myLibrary)
         myLibrary = myLibrary.filter((book) => book.id === getLastBookId())
-        console.log(myLibrary)
+      })
+
+      if (read.textContent == `Read: Yes`) {
+        readBtnText.textContent = `Unread`}
+
+      readBtn.addEventListener("click", () => {
+        if (read.textContent == `Read: Yes`) {
+            read.textContent = `Read: No`
+            readBtnText.textContent = `Read`
+        } else if (read.textContent == `Read: No`){
+            read.textContent = `Read: Yes`
+            readBtnText.textContent = `Unread`
+        }
       })
 }
 
