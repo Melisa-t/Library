@@ -1,3 +1,4 @@
+const myLibrary = []
 
 const modal = document.getElementById("bookModal");
 const openModalBtn = document.querySelector(".openModalBtn");
@@ -30,16 +31,13 @@ class Book {
 function addBookToLibrary(id, title, author, pages, read){
   const bookObject = new Book(title, author, pages, read) 
   myLibrary.push(bookObject)
-  removeBookFromLibrary(bookObject)
+  getLastBookId()
 }
 
-function removeBookFromLibrary(){
-  const removeButton = document.querySelector(".remove-btn")
-  
-  removeButton.addEventListener("click", () => {
-
-  })
+function getLastBookId(){
+  return myLibrary[myLibrary.length-1].id
 }
+
 
 
 const submitBtn = document.querySelector(`.submit-btn`)
@@ -142,9 +140,11 @@ function createWrap(){
 
 
       changeInput(title, author, pages, read)
+      getLastBookId()
+      console.log(getLastBookId())
 }
 
-const myLibrary = []
+
 
 const Book1 = new Book ("To Kill a Mockingbird", `Harper Lee`, 281, `read`)
 const Book2 = new Book ("1984", `George Orwell`, 328, `read`)
